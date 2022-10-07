@@ -1,0 +1,21 @@
+# This YAML file require Traefik deployed on cluster.
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: boutique-ingress
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+
+spec:
+  rules:
+    - host: boutique.cluster.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-external
+                port:
+                  number: 80
