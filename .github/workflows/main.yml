@@ -20,7 +20,7 @@ jobs:
       - name: kube-score check
         uses: piraces/kube-score-ga@v0.1.3
         with:
-          manifests-folders:  './out/kustomize/*.yml'
+          manifests-folders:  './out/kustomize/*.yaml'
           kube-score-version: '1.14.0'
           ignore-exit-code: 'true'
           output-file: 'result.txt'
