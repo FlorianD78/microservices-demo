@@ -24,7 +24,7 @@ jobs:
           manifests-folders:  './out/kustomize/*.yaml'
           kube-score-version: '1.14.0'
           ignore-exit-code: 'true'
-          output-file: 'result.txt'
+          output-file: 'result.md'
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
