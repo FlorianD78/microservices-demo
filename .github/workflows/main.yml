@@ -30,11 +30,3 @@ jobs:
         with:
           name: artifact-1
           path: result.txt
-      - name: Publish artifact
-        uses: dorny/test-reporter@v1
-        if: success()
-        with:
-          artifact: artifact-1
-          name: Tests
-          path: '*.txt'
-          reporter: jest-junit 
