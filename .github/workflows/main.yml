@@ -31,4 +31,4 @@ jobs:
           name: artifact-1
           path: result.txt
       - name: to summary
-        run: cat result.txt >> $GITHUB_STEP_SUMMARY
+        run: cat result.md >> $GITHUB_STEP_SUMMARY
