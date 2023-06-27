@@ -29,3 +29,12 @@ jobs:
         with:
           name: artifact-1
           path: result.txt
+  report:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: dorny/test-reporter@v1
+      with:
+        artifact: artifact1
+        name: Tests
+        path: '*.txt'
+        reporter: jest-junit 
