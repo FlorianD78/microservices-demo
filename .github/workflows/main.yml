@@ -29,6 +29,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: artifact-1
-          path: result.txt
+          path: result.md
       - name: to summary
         run: cat result.md >> $GITHUB_STEP_SUMMARY
