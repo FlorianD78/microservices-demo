@@ -1,10 +1,10 @@
 ---
-name: Use Kube-score
+name: Use Kube-score and show result
 
 on:
-    push:
-      branches:
-        - main
+  push:
+    branches:
+      - main
 
 jobs:
   kube-score:
@@ -25,10 +25,5 @@ jobs:
           kube-score-version: '1.14.0'
           ignore-exit-code: 'true'
           output-file: 'result.md'
-      - name: upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: artifact-1
-          path: result.md
-      - name: to summary
+      - name: Display to summary
         run: cat result.md >> $GITHUB_STEP_SUMMARY
