@@ -25,6 +25,5 @@ jobs:
           kube-score-version: '1.14.0'
           ignore-exit-code: 'true'
           output-file: 'result.md'
-          output-format: 'ci'
       - name: Display to summary
         run: cat result.md >> $GITHUB_STEP_SUMMARY
